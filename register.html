@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="container">
-        <form id="registerForm" class="form">
+        <form id="registerForm" class="form" autocomplete="off">
             <h2>Register</h2>
             <div class="input-group">
                 <label for="regName">Name</label>
@@ -25,6 +25,7 @@
             <div class="input-group">
                 <label for="regPassword">Password</label>
                 <input type="password" id="regPassword" name="regPassword" required>
+                <small>Password must be at least 8 characters, include uppercase, lowercase, number, and special character.</small>
             </div>
             <div class="input-group">
                 <label for="regConfirmPassword">Confirm Password</label>
@@ -36,6 +37,7 @@
             <p id="registerSuccess" class="success"></p>
         </form>
     </div>
+    <script src="db.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
