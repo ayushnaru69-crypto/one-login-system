@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard | One System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="dashboard">
+            <h2>Welcome!</h2>
+            <p id="userGreeting"></p>
+            <button onclick="logout()" class="btn">Logout</button>
+        </div>
+    </div>
+    <script>
+        // Dashboard greeting and logout
+        const user = JSON.parse(localStorage.getItem('loggedInUser'));
+        if (!user) {
+            window.location.href = "index.html";
+        } else {
+            document.getElementById('userGreeting').innerText = `Hello, ${user.name} (${user.mobile})`;
+        }
+        function logout() {
+            localStorage.removeItem('loggedInUser');
+            window.location.href = "index.html";
+        }
+    </script>
+</body>
+</html>
