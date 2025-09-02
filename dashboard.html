@@ -14,14 +14,16 @@
             <button onclick="logout()" class="btn">Logout</button>
         </div>
     </div>
+    <script src="db.js"></script>
     <script>
-        // Dashboard greeting and logout
-        const user = JSON.parse(localStorage.getItem('loggedInUser'));
-        if (!user) {
-            window.location.href = "index.html";
-        } else {
-            document.getElementById('userGreeting').innerText = `Hello, ${user.name} (${user.mobile})`;
-        }
+        (async function() {
+            const user = JSON.parse(localStorage.getItem('loggedInUser'));
+            if (!user) {
+                window.location.href = "index.html";
+            } else {
+                document.getElementById('userGreeting').innerText = `Hello, ${user.name} (${user.mobile})`;
+            }
+        })();
         function logout() {
             localStorage.removeItem('loggedInUser');
             window.location.href = "index.html";
