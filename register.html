@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register | One System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <form id="registerForm" class="form">
+            <h2>Register</h2>
+            <div class="input-group">
+                <label for="regName">Name</label>
+                <input type="text" id="regName" name="regName" required>
+            </div>
+            <div class="input-group">
+                <label for="regEmail">Email</label>
+                <input type="email" id="regEmail" name="regEmail" required>
+            </div>
+            <div class="input-group">
+                <label for="regMobile">Mobile Number</label>
+                <input type="text" id="regMobile" name="regMobile" required maxlength="10" pattern="[0-9]{10}">
+            </div>
+            <div class="input-group">
+                <label for="regPassword">Password</label>
+                <input type="password" id="regPassword" name="regPassword" required>
+            </div>
+            <div class="input-group">
+                <label for="regConfirmPassword">Confirm Password</label>
+                <input type="password" id="regConfirmPassword" name="regConfirmPassword" required>
+            </div>
+            <button type="submit" class="btn">Register</button>
+            <p class="switch-link">Already have an account? <a href="index.html">Login</a></p>
+            <p id="registerError" class="error"></p>
+            <p id="registerSuccess" class="success"></p>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
